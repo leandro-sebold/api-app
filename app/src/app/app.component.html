@@ -1,0 +1,9 @@
+<input type="text" [(ngModel)]="nomeUsuario" placeholder="Nome">
+<input type="number" [(ngModel)]="idadeUsuario" placeholder="Idade">
+<button (click)="cadastrarUsuario()">Cadastrar</button>
+
+<div *ngFor="let usuario of usuarios">
+    <p>Nome: {{ usuario.nome }}</p>
+    <p>Idade: {{ usuario.idade }}</p>
+    <button (click)="deletarUsuario(usuario.id)">Deletar usuário</button>
+</div>
